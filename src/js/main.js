@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import {Route, NavLink, HashRouter} from "react-router-dom";
 import Home from "./home";
 import Kontak from "./kontak";
@@ -10,7 +10,7 @@ class Main extends Component {
         return (
             <HashRouter>
                 <div>
-                    <hl className="title">React JS SPA</hl>
+                    <h1 className="title">React JS SPA</h1>
                     <ul className="header">
                         <li>
                             <NavLink to="/">Home</NavLink>
@@ -26,10 +26,10 @@ class Main extends Component {
                         </li>
                     </ul>
                     <div className="content">
-                        <Route exact path="/">component={Home}</Route>
-                        <Route path="/transaksi">component={Transaksi}</Route>
-                        <Route path="/kontak">component={Kontak}</Route>
-                        <Route path="/tentang">component={Tentang}</Route>
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/transaksi" component={Transaksi}/>
+                        <Route path="/kontak" component={Kontak}/>
+                        <Route path="/tentang" component={Tentang}/>
                     </div>
                 </div>
             </HashRouter>

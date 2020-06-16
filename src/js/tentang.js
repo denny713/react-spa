@@ -1,3 +1,5 @@
+import React, {Component} from "react";
+
 class Tentang extends Component {
     render() {
         return (
