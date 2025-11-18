@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Route, NavLink, HashRouter} from "react-router-dom";
+import {Routes, Route, NavLink, HashRouter} from "react-router-dom";
 import Home from "./home";
 import Kontak from "./kontak";
 import Transaksi from "./transaksi";
@@ -16,20 +16,22 @@ class Main extends Component {
                             <NavLink to="/">Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="transaksi">Transaksi</NavLink>
+                            <NavLink to="/transaksi">Transaksi</NavLink>
                         </li>
                         <li>
-                            <NavLink to="kontak">Kontak</NavLink>
+                            <NavLink to="/kontak">Kontak</NavLink>
                         </li>
                         <li>
-                            <NavLink to="tentang">Tentang</NavLink>
+                            <NavLink to="/tentang">Tentang</NavLink>
                         </li>
                     </ul>
                     <div className="content">
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/transaksi" component={Transaksi}/>
-                        <Route path="/kontak" component={Kontak}/>
-                        <Route path="/tentang" component={Tentang}/>
+                        <Routes>
+                            <Route path="/" element={<Home/>}/>
+                            <Route path="/transaksi" element={<Transaksi/>}/>
+                            <Route path="/kontak" element={<Kontak/>}/>
+                            <Route path="/tentang" element={<Tentang/>}/>
+                        </Routes>
                     </div>
                 </div>
             </HashRouter>

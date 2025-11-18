@@ -1,0 +1,17 @@
+# Dependabot configuration
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Allow Dependabot to open up to 5 pull requests at a time
+    open-pull-requests-limit: 5
+    # Labels to set on pull requests
+    labels:
+      - "dependencies"
+      - "automated"
+    # Increase the version requirements only when required
+    versioning-strategy: increase
+
